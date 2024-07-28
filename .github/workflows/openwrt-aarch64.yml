@@ -41,7 +41,7 @@ jobs:
           make -j $(($(nproc)+1)) V=s
 
       - name: 1-2 Single-thread compile [aarch64]
-        if: failure()
+        if: succes()
         run: |
           cd $GITHUB_WORKSPACE/openwrt/
           make -j 1 V=s
